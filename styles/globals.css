@@ -1,16 +1,161 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 400;
+  src: url("../public/fonts/OpenSans-Regular.woff2") format("woff2"),
+    url("../public/fonts/OpenSans-Regular.woff") format("woff");
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 700;
+  src: url("../public/fonts/OpenSans-Bold.woff2") format("woff2"),
+    url("../public//fonts/OpenSans-Bold.woff") format("woff");
 }
 
 * {
+  outline: none;
+  border: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #202121;
+  padding-top: 12rem;
+  background: #f4f7f6;
+}
+
+main {
+  display: block;
+  width: 100%;
+  padding: 0 4rem 8rem;
+  max-width: 375px;
+  margin: 0 auto;
+}
+
+main > * ~ *:not(:nth-child(2)) {
+  margin-top: 2rem;
+}
+
+a {
+  font-weight: 700;
+  line-height: 1em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 1.3rem;
+  line-height: 1.75em;
+}
+
+a {
+  font-size: 1.43rem;
+  line-height: 3em;
+  padding-top: 0.1em;
+}
+
+footer {
+  position: fixed;
+  top: auto;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+  z-index: 99;
+  background: #f4f7f6;
+  border-top: 1px solid #e6eaea;
+}
+
+footer nav ul {
+  display: flex;
+}
+
+footer nav ul li {
+  flex-grow: 1;
+  border-right: 1px solid #e6eaea;
+}
+
+footer nav ul li:last-of-type {
+  border-right: none;
+}
+
+a:hover,
+a:active {
+  color: #00a6fb;
+}
+
+@media only screen and (min-width: 710px) {
+  body {
+    padding-top: 8rem;
+  }
+  main {
+    padding-bottom: 16rem;
+  }
+  main {
+    max-width: 710px;
+  }
+  main > *:first-child {
+    padding-top: 5rem;
+  }
+  main > * ~ *:not(:nth-child(2)) {
+    margin-top: 3rem;
+  }
+  p {
+    font-size: 1.4rem;
+  }
+  footer {
+    padding: 1.9rem 0;
+  }
+  footer > div {
+    display: flex;
+    justify-content: space-between;
+  }
+  footer nav a {
+    position: relative;
+    width: auto;
+    padding: 0.5rem 3rem;
+    border: none;
+  }
+  footer nav li:nth-of-type(2) a {
+    border-left: 1px solid #e6eaea;
+  }
+}
+
+@media only screen and (min-width: 1045px) {
+  main {
+    max-width: 1045px;
+  }
 }
