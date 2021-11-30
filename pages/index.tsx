@@ -21,7 +21,7 @@ const Home: NextPage = () => {
       </header>
       <main className={styles.main}>
         <h1>
-          Hi, I'm Shawn.
+          Hi, I&lsquo;m Shawn.
         </h1>
 
         <p>
@@ -41,7 +41,7 @@ const Home: NextPage = () => {
           <nav>
             <ul>
               <li><a href="mailto:croesshawn@gmail.com">Email</a></li>
-              <li><a href="http://www.linkedin.com/in/shawn-croes" target="_blank">LinkedIn</a></li>
+              <li><a href="http://www.linkedin.com/in/shawn-croes" target="_blank" rel="noreferrer">LinkedIn</a></li>
             </ul>
           </nav>
         </div>
